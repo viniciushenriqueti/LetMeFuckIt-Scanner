@@ -3,7 +3,7 @@ Scanner and Exploit Magento
 
 O Scanner explora a vulnerabilidade **SQLi Vulnerability (1.9.1.0 CE)** do Magento.
 
-A vulnerabilidade foi corrigida no **Patch SUPEE-5344**, entretanto, há muitas lojas que não aplicaram o patch de segurança. 
+A vulnerabilidade foi corrigida no **Patch SUPEE-5344**, entretanto, o scanner serve para localizar e testar os sitemas que não aplicaram o patch de segurança. 
 
 O **LetMeFuckIt** foi escrito em Python e utiliza as seguintes bibliotecas:
 
@@ -26,6 +26,7 @@ O **LetMeFuckIt** foi escrito em Python e utiliza as seguintes bibliotecas:
 ## Dorks Recomendadas##
 
 "inurl:/customer/account/login site:com.br"
+
 "inurl:/checkout/onepage/ site:com.br"
 
  
@@ -42,6 +43,15 @@ Os usuários fornecidos na execução são adicionados automaticamente como admi
 ![](http://i.imgur.com/KuK3S95.png)
 
 ![](http://i.imgur.com/DSVEoSz.jpg)
+
+
+## Possíveis erros ##
+
+Caso você se depare com o erro abaixo, é porque o scanner utiliza a biblioteca pygoogle, a biblioteca está desatualizada com o novo sistema de API's do Google, pois agora é necessário uma Key para utilizar a api.
+
+    pygoogle ERROR __search__| responseDetails : Suspected Terms of Service Abuse. Please see http://code.google.com/apis/errors
+
+Se o erro aparecer, apenas aguarde 1 minuto ou 2. O Scanner voltará ao normal.
 
 ## Créditos ##
 
